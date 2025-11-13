@@ -38,7 +38,7 @@ Aktualisiere die IT-Module Datenbank von modulbaukasten.ch.
 
 1. **Aktuelles Working Directory**: `/Users/sascha/Documents/git/saw_tool_webscraper`
 2. **Python-Umgebung**: Python 3 mit beautifulsoup4, lxml, playwright
-3. **Vorherige Datenbank**: `/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank/it-module-master.json`
+3. **Vorherige Datenbank**: `/Users/sascha/Documents/git/wiss_data_it-module/data/it-module-master.json`
 
 ### Ablauf (3 Phasen)
 
@@ -68,7 +68,7 @@ Führe `src/phase2_parse.py` aus:
   - Handlungsziele mit Beschreibungen
   - Handlungsnotwendige Kenntnisse
   - Berufe (korrekt via mat-chip)
-- Speichert neue JSON in `/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank/it-module-master.json`
+- Speichert neue JSON in `/Users/sascha/Documents/git/wiss_data_it-module/data/it-module-master.json`
 
 ```bash
 python3 src/phase2_parse.py
@@ -113,9 +113,9 @@ from datetime import datetime
 from collections import defaultdict
 
 # Pfade
-CURRENT_DB = Path("/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank/it-module-master.json")
-BACKUP_DIR = Path("/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank/backups")
-REPORT_DIR = Path("/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank")
+CURRENT_DB = Path("/Users/sascha/Documents/git/wiss_data_it-module/data/it-module-master.json")
+BACKUP_DIR = Path("/Users/sascha/Documents/git/wiss_data_it-module/data/backups")
+REPORT_DIR = Path("/Users/sascha/Documents/git/wiss_data_it-module/docs")
 
 def find_latest_backup():
     """Finde neuestes Backup."""
@@ -383,10 +383,10 @@ Nach Ausführung aller 4 Phasen solltest du folgende Dateien haben:
 
 1. **HTML-Daten**: `data/raw_html/*.html` (395 Dateien)
 2. **Module-Index**: `data/raw_html/module_index.json`
-3. **Haupt-Datenbank**: `/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank/it-module-master.json`
+3. **Haupt-Datenbank**: `/Users/sascha/Documents/git/wiss_data_it-module/data/it-module-master.json`
 4. **Validierung**: `data/validation_report.txt`
-5. **Update-Report**: `/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank/UPDATE-REPORT-[DATUM].md`
-6. **Backup**: `/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank/backups/it-module-master-[DATUM].json`
+5. **Update-Report**: `/Users/sascha/Documents/git/wiss_data_it-module/docs/UPDATE-REPORT-[DATUM].md`
+6. **Backup**: `/Users/sascha/Documents/git/wiss_data_it-module/data/backups/it-module-master-[DATUM].json`
 
 ### Finale Schritte
 
@@ -400,9 +400,9 @@ Zeige dem User eine Zusammenfassung:
 
 ## Erwartetes Ergebnis
 
-- ✅ Aktualisierte Datenbank in `it-module-datenbank/it-module-master.json`
-- ✅ Update-Report als Markdown in `it-module-datenbank/UPDATE-REPORT-[DATUM].md`
-- ✅ Backup der vorherigen Version in `it-module-datenbank/backups/`
+- ✅ Aktualisierte Datenbank in `wiss_data_it-module/data/it-module-master.json`
+- ✅ Update-Report als Markdown in `wiss_data_it-module/docs/UPDATE-REPORT-[DATUM].md`
+- ✅ Backup der vorherigen Version in `wiss_data_it-module/data/backups/`
 - ✅ Validierungsbericht in `data/validation_report.txt`
 - ✅ Alle HTML-Dateien in `data/raw_html/`
 

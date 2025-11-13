@@ -9,9 +9,9 @@ from pathlib import Path
 from datetime import datetime
 
 # Pfade
-CURRENT_DB = Path("/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank/it-module-master.json")
-BACKUP_DIR = Path("/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank/backups")
-REPORT_DIR = Path("/Users/sascha/Documents/git/saw_notizen-inbox/it-module-datenbank")
+CURRENT_DB = Path("/Users/sascha/Documents/git/wiss_data_it-module/data/it-module-master.json")
+BACKUP_DIR = Path("/Users/sascha/Documents/git/wiss_data_it-module/data/backups")
+REPORT_DIR = Path("/Users/sascha/Documents/git/wiss_data_it-module/docs")
 
 
 def find_latest_backup():

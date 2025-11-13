@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 
 # Konfiguration
 RAW_HTML_DIR = Path("/Users/sascha/Documents/git/saw_tool_webscraper/data/raw_html")
-OUTPUT_DIR = Path("/Users/sascha/Documents/git/saw_notizen-inbox")
+OUTPUT_DIR = Path("/Users/sascha/Documents/git/wiss_data_it-module/data")
 
 
 def calculate_hash(pub_datum):
